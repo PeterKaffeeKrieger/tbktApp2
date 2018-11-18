@@ -8,8 +8,14 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'npm install'
-		sh 'npm run electron-build'
-		sh 'npm run electron-package-darwin'
+				sh 'npm run electron-build'
+				sh 'npm run electron-package-darwin'
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'npm test'
+				sh 'npm e2e'
             }
         }
     }

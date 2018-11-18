@@ -1,6 +1,8 @@
 {
   "name": "teambuktu-app",
-  "version": "0.0.0",
+  "description": "swa lab",
+  "version": "1.0.0",
+  "author": "teamBuktu",
   "main": "main.js",
   "scripts": {
     "electron": "ng build --base-href ./ && electron .",
@@ -9,7 +11,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron-build": "ng build --base-href",
+    "electron-package-darwin":"electron-packager . --platform=darwin --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +53,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.1",
-    "typescript.list": "~6.7.0"
-  }
+    "typescript.list": "~6.7.0",
+    "electron-packager":"~12.2.0",
+    "electron-builder": "latest"
+  },
+  "postinstall": "electron-builder install-app-deps"
 }
