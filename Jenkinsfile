@@ -4,6 +4,9 @@ pipeline {
             image 'node:8.12.0-alpine'
         }
     }
+    environment {
+					CHROME_BIN = '/usr/local/bin/GoogleChrome.app'
+	}
     stages {
         stage('Build') { 
             steps {
