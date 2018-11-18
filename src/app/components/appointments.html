@@ -1,0 +1,9 @@
+<h1>Appointments</h1>
+<mat-nav-list>
+    <mat-list-item *ngFor="let appointment of dataService.getAppointments()">
+        <a mat-list-item [routerLink]="['/appointment/' + appointment.getId()]">
+             {{appointment.getName()}} 
+        </a>
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-nav-list>

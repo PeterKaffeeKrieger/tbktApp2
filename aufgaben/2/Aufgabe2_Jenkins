@@ -1,0 +1,62 @@
+Jenkins wird am besten über Tomcat Server gestartet.
+Dazu: lade Tomcat und Jenkins runter. Packe Datei jenkins.war in tomcat/webapps.
+
+Terminal Commands for Tomcat/Jenkins
+
+Goto commandpromt (cmd) - windows  |  terminal - mac
+ - goto tomcat/bin directory
+ - make all files executable : chmod +x *.sh
+
+aus bin directory im installierten tomcat ordner:
+-start tomcat: ./startup.sh
+-tomcat satrted at: http://localhost:8080
+-jenkins ist at: http://localhost:8080/jenkins
+-shutdown tomcat: ./shutdown.sh
+
+- aus browser bauen:
+	JenkinsProjekt -> Build Auslöser - > Build von Außerhalb starten
+JENKINS_URL/job/Test1/build?token=TOKEN_NAME
+z.B.: http://localhost:8080/jenkins/job/Test1/build?token=1234
+mit JENKINS_URL = http://localhost:8080/jenkins
+	TOKEN_NAME = 1234
+
+- jobs anketten, also mehrere Jobs nacheinander ausführen:
+in einem Projekt den Buildauslöser oder/undPostBuild so konfigurieren,
+dass es auf andere Projekte gewartet/ausgelöst wird
+jenkins Seite aktualisieren, damit man Ergebnisse sieht
+
+**********************************************************************************
+Git / GitHub
+Anleitung ist für Mac. Windows or Linux haben bisschen anderer Befehle
+Job von Git aus ausführen. Tutorial zu der Anleitung: https://www.youtube.com/watch?v=bGqS0f4Utn4
+1. Job in Jenkins anlegen mit freestyle Projekt, 
+	1.1 Buildverfahren: Shell ausführen, In Befehlfenster: 
+		1.1.1 Zum Projektordner navigieren: cd /Users/xyz_username/desktop/tomcat/javaproject
+		1.1.2 Projekt kompillieren: javac Hello.java
+		1.1.3 Projekt ausführen: java Hello
+	1.2 In Jenkins: Projekt -> Buildverlauf -> Consolenausgabe: Ergebniss sehen
+	1.3 Projekt zum Git und Github hinzufügen, Aus dem Java Projekt Ordner heraus:
+		1.3.1 git init
+		1.3.2 git status
+		1.3.3 git add .
+		1.3.4 git commit -m 'added HelloWorld program'
+		1.3.5 git remote add origin https://github.com/PeterKaffeeKrieger/HelloWorld.git
+		1.3.6 git push -u origin master
+	1.4 Jenkins Jobs konfigurieren:
+		1.4.1 Jenkins -> Jenkins verwalten -> PlugIns verwalten, falls nicht installiert: Git plugin nachinstallieren
+		1.4.2 Jenkins -> Projekt -> konfigurieren -> Source Code Management: git, RepoURL vom GitHub eingeben, z.b:
+		https://github.com/PeterKaffeeKrieger/HelloWorld.git
+		1.4.3 In der Projektkonfiguration: Build Triggers: Pool SCM, Scedule: z.B. * * * * * angeben, so wird die Repo bei GitHub jede Minute nach einer Änderung überprüft, falls true -> build
+		1.4.4 kleine Änderung an Java Projekt und in GitHub puschen
+		1.4.5 das Fenster in Jenkins muss evtl aktualisiert werden, danach sieht mann, dass der Job erfolgreich stattgefunden ist.
+		1.4.5 die von Jenkins erstellten Artefakte befinden sich unter: /Users/xyz_username/.jenkins/jobs/YourJenkinsProjektName
+
+2. Für die Benachrichtigung über die erledigten Jobs kann das Tool Catlight (https://catlight.io) verwendet werden
+
+3. Automatisches Deployment
+	3.1 Installiere das Plugin über Jenkins Fenster: Jenkins -> Jenkins verwalten -> Plugins verwalten -> Verfügbar -> such nach deploy -> installiere „deploy to container“ plugin.
+	3.2 Create Build Job in Jenkins -> Jenkins -> Element anlegen -> z.B. mit „AutomatedDeploymentTest“ als FreeStyle Project… komt weiter
+Aktuell kracht es :/ bei: Create your initial Pipeline as a Jenkinsfile, Schritt 5
+
+			
+

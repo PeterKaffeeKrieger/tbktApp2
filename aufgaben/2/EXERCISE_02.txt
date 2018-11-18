@@ -1,0 +1,33 @@
+-------------------------------------
+:. HSKA SOFTWARE-ARCHITECTURES LAB .:
+-------------------------------------
+\ ARCHITECTURE/PRODUCT EVALUATION  /
+ ----------------------------------
+		   
+EXERCISE-02: Tech primer, project structure
+--------------------------------
+Exercise date : 15.October 2018 
+Due date      : 22.October 2018
+--------------------------------
+Task-1: 
+
+- Technology/framework
+-- Understand the technology you will be using
+-- Architectural styles 
+-- Design patterns
+-- Project structure
+-- ... What else does your technology/framework offer? Built-in vs your responsibility.
+-- Create a hello world (or more, if you have the time)
+
+- Build system
+-- Understand the build system you will be using
+-- What does the build system provide from the standard (and using plugins/extensions)?
+
+Objectives:
+- Each student understands the technology/framework for realizing the product
+- Each student understands the build system and its capabilities
+- Each team will prepare and make a short presentation and upload it to Ilias
+-- The technology/framework
+-- The build system
+
+

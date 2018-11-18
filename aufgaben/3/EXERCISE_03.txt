@@ -1,0 +1,29 @@
+-------------------------------------
+:. HSKA SOFTWARE-ARCHITECTURES LAB .:
+-------------------------------------
+\ ARCHITECTURE/PRODUCT EVALUATION  /
+ ----------------------------------
+		   
+EXERCISE-03: First project iteration
+--------------------------------
+Exercise date : 22.October 2018 
+Due date      : 05.November 2018
+--------------------------------
+Task-1: 
+
+- Create the app project with the basic structure
+-- Create the model
+-- Create the screens and the navigation
+-- Try to create sample data
+
+- Build system
+-- Make your app build with your build system
+
+Objectives:
+- Create the app in the first iteration
+- Each team will prepare and make a short presentation and upload it to Ilias
+-- The current state for the app
+-- The build system
+-- Explain: Lessons learned with the technology/project
+
+

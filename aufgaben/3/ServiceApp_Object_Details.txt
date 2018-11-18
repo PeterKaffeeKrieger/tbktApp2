@@ -1,0 +1,37 @@
+Technician:
+-----------
+email,name,password,phone
+
+Customer:
+---------
+name,geolocation,contact(phone,mail,web),address,serviceProducts[],serviceHistory[]
+
+ServiceOrder(Appointment):
+--------------------------
+description,technician,serviceProduct,customer,plannedTime,
+plannedPartsAndServices,creationDate,datetimeFrom,dateTimeTo
+status[Open,Completed],usedPartsAndService,serviceDateTime,realDateFrom,realDateTo
+
+ServiceProduct:
+---------------
+name,description,customer,serialNumber,purchaseDate,documents,
+bom(Bill Of Materials): [Part, Quantity, Unit]
+
+
+
+Part,Service:
+-------------
+Part: name,description
+Service: name,description
+
+Task,Note:
+----------
+title,description,status[Open,InProgress,Finished],type[Task,Note],creationDate,technician
+
+Warehouse:
+----------
+name,description,technician
+
+WarehouseOrder:
+---------------
+orderNumber,description,orderDate,parts[Part,Quantity,Unit],status[New,InProgress,Done]

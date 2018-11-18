@@ -1,0 +1,42 @@
+-------------------------------------
+:. HSKA SOFTWARE-ARCHITECTURES LAB .:
+-------------------------------------
+\ ARCHITECTURE/PRODUCT EVALUATION  /
+ ----------------------------------
+		   
+EXERCISE-01: Understand the product, choose tech, choose architecture/style
+--------------------------------
+Exercise date : 08.October 2018 
+Due date      : 15.October 2018
+--------------------------------
+Task-1:
+
+- The product
+-- We will build a field service app
+-- Read the product document and understand the requirements
+-- Evaluate the technologies that you can use (Top favourite, second favourite)
+-- Create a diagram, showing all the objects that you have found in the product document
+---- Model objects
+---- Screens and navigation for the best UX for the technician
+---- Associations between the objects
+---- Proposed architecture in general (tech, project structure, modules/components, design patterns, etc.)
+PS: The architecture may change, as time goes bye.
+
+Objectives:
+- Each student understands the product (field service) requirements
+- The team agrees on a technology/framework, project/architecture style, etc.
+- Each team will prepare and make a short presentation and upload it to Ilias
+-- Product information: How are you planning to build it?
+-- Why did you choose the things this way?
+- Q/A regarding the product requirements
+-- The tutor will create a detailed document after evaluating your suggestions/solutions
+
+Task-2:
+The captains send an E-Mail to the tutor (aladdin.oezenir@abas.de)
+
+# Team name
+Full name (C), Matrikelnummer, E-Mail address
+Full name, Matrikelnummer, E-Mail address
+
+Choose a communication medium: Discord
+

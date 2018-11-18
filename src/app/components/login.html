@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <mat-card style="width: 300px; margin-left: auto; margin-right: auto; margin-top:64px">
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form class="loginForm">
+        <mat-form-field>
+          <input #email matInput placeholder="Email" [formControl]="emailFormControl">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <br/>
+        <mat-form-field class="example-full-width">
+          <input #password type="password" matInput placeholder="Password" value="">
+        </mat-form-field>
+        <br/>
+        <button (click)="login(email.value, password.value)" mat-raised-button color="primary">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
