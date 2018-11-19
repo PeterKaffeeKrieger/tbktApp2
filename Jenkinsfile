@@ -5,7 +5,7 @@ pipeline {
         }
     }
     environment {
-					CHROME_BIN = '/usr/local/bin/chromedriver'
+					CHROME_BIN = 'chrome'
 	}
     stages {
         stage('Build') { 
