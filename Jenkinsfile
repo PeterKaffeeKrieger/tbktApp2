@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        docker {
-            image 'node:8.12.0-alpine'
-        }
+        any
     }
     environment {
 					CHROME_BIN = 'chrome'
