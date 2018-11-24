@@ -1,7 +1,6 @@
 pipeline {
-    agent {
+    agent 
         any
-    }
     environment {
 					CHROME_BIN = 'chrome'
 	}
